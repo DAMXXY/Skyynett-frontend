@@ -1,0 +1,53 @@
+STORE IDENTITY:(Aligned with an existing brand, while being responsive and indepth)
+
+
+
+PURPOSE AND FUNCTIONALITY:
+
+Phase 1:
+Product catalog with images, pricing, and specifications.
+User-friendly navigation and search.
+Contact and inquiry form.
+
+Phase 2:
+Payment processing and checkout system.
+Customer personalization (user accounts, wishlists, order tracking).
+Admin dashboard for product and order management.
+
+
+
+
+SCOPE:
+
+Initial Product Range: ~10–20 gadgets (phones, accessories, audio devices, etc.)
+Planned Pages / Sitemap:
+Home — Hero section, featured products, categories.
+Shop — All products listing, filters, and search.
+Product Details — Individual gadget info and specs.
+About Us — Brand story, mission, and contact info.
+Contact — Inquiry form, social links, and support info.
+(Optional Future Pages: Cart, Checkout, Profile, Admin Panel)
+
+Technical Scope Phase2:
+
+interactivity
+Responsive design across devices.
+
+
+
+MILESTONE / TO-DO LIST:
+
+Phase 1 — Planning (Current Stage)
+//Define brand tone, color scheme, and visual identity.
+//Finalize sitemap and page structure.
+Draft wireframes for each page.
+
+Phase 2 — Design & Development
+Implement responsive layout using HTML/CSS.
+Add content and visuals for products.
+Test responsiveness across screen sizes.
+
+Phase 3 — Review & Expansion
+Gather feedback and refine UI/UX.
+Plan backend integration and database setup.
+Add user personalization and checkout system.

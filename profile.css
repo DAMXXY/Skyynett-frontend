@@ -1,0 +1,67 @@
+.profile-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    background: var(--bg);
+    color: var(--text);
+  }
+  
+  .profile-card {
+    background: var(--sidebar-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    width: 350px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  }
+  
+  .profile-card h2 {
+    margin-bottom: 1rem;
+  }
+  
+  .profile-info p {
+    margin: 10px 0;
+    font-size: 1rem;
+  }
+  
+  .profile-card button {
+    margin: 10px;
+    padding: 10px 15px;
+    width: 80%;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .btn-primary {
+    background: var(--navbar);
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background: var(--accent);
+  }
+  
+  .btn-secondary {
+    background: #555;
+    color: white;
+  }
+  
+  .btn-secondary:hover {
+    background: #888;
+  }
+  
+  #changePassForm {
+    margin-top: 1rem;
+  }
+  
+  #changePassForm input {
+    width: 90%;
+    padding: 8px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  

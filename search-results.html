@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Results - Skyynett</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="fontawesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/png" href="skyynettlogo.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/dist/tabler-icons.min.css">
+  <link rel="stylesheet" href="search-results.css">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <!-- Hamburger Menu (Mobile) -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar top"></div>
+    <div class="bar middle"></div>
+    <div class="bar bottom"></div>
+  </div>
+
+  <!-- Logo Section -->
+  <div class="logo">
+    <img src="skyynettlogo.png" alt="Logo">
+    <span class="brand-text">Skyynett</span>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links desktop-only">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- Navbar Buttons -->
+  <div class="nav-buttons">
+    <!-- Search Icon -->
+    <div class="search-container desktop-only">
+      <button id="searchToggle" class="search-icon" aria-label="Open search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg></button>
+      <div id="searchDropdown" class="search-dropdown">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <button id="searchBtn" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-6 -6" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /></svg></button>
+      </div>
+    </div>
+
+    <!-- Cart -->
+    <button id="cartBtn" class="cart-btn">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+      <span id="cartCount" class="cart-badge" style="display: none;">0</span>
+    </button>
+
+    <!-- Wishlist -->
+    <button class="wishlist_nav_btn" aria-label="Wishlist"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg></button>
+
+    <!-- Theme Toggle Button -->
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button>
+
+    <!-- Profile Button -->
+    <a href="profile.html" class="profile-nav-btn" aria-label="Profile"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user-circle"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" /><path d="M12 10m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6.168 18.849a4 4 0 0 1 3.832 -2.849h4m0 0a4 4 0 0 1 3.834 2.855" /></svg></a>
+  </div>
+</header>
+
+
+<!-- Mobile Sidebar Menu -->
+<div id="sidebarMenu" class="sidebar-menu">
+  <div class="sidebar-header">
+    <h3>Menu</h3>
+    <button class="sidebar-close" id="sidebarClose">✕</button>
+  </div>
+  <ul class="sidebar-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="sidebar-search">
+    <input type="text" id="sidebarSearchInput" placeholder="Search products...">
+    <button id="sidebarSearchGo">Search</button>
+  </div>
+  <div id="sidebarSearchContainer" class="sidebar-search-results"></div>
+</div>
+
+<!-- Main Content -->
+<main class="search-results-main">
+  <!-- Header with search info and filters -->
+  <div class="search-results-header">
+    <div class="search-header-content">
+      <h1 id="searchTitle">Search Results</h1>
+      <p id="searchDesc">Showing <span id="resultCount">0</span> results</p>
+    </div>
+
+    <!-- Filter and Sort Controls -->
+    <div class="controls">
+      <div class="view-toggle">
+        <button class="view-btn grid-view active" id="gridViewBtn" data-view="grid">⊞ Grid</button>
+        <button class="view-btn list-view" id="listViewBtn" data-view="list">☰ List</button>
+      </div>
+      <div class="sort-dropdown">
+        <select id="sortSelect">
+          <option value="relevance">Sort by: Relevance</option>
+          <option value="price-low">Price: Low to High</option>
+          <option value="price-high">Price: High to Low</option>
+          <option value="name">Product Name</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <!-- Products Grid -->
+  <div id="searchGrid" class="shop-grid"></div>
+
+  <!-- No Results Message -->
+  <div id="noResults" class="no-results" style="display: none;">
+    <p>No products found matching your search.</p>
+    <a href="index.html" class="btn-primary">Back to Home</a>
+  </div>
+</main>
+
+<!-- Cart Sidebar -->
+<aside id="cartSidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h2>Shopping Cart</h2>
+    <button id="closeCart" class="close-btn">✕</button>
+  </div>
+  <div id="cartItems" class="cart-items"></div>
+  <div class="cart-footer">
+    <div class="cart-total">
+      <span>Total:</span>
+      <span id="cartTotal">$0.00</span>
+    </div>
+    <button id="checkoutBtn" class="btn-checkout">Checkout</button>
+  </div>
+</aside>
+
+<!-- Product Detail Modal -->
+<div id="detailModal" class="detail-modal" style="display: none;">
+  <div class="modal-overlay"></div>
+  <div class="modal-content">
+    <button class="modal-close">✕</button>
+    <div class="modal-body">
+      <div class="modal-image">
+        <img id="detailProductImage" src="" alt="Product">
+      </div>
+      <div class="modal-details">
+        <h2 id="detailProductName"></h2>
+        <p id="detailProductDesc" class="detail-description"></p>
+        <div class="detail-price">
+          <span class="price" id="detailProductPrice"></span>
+        </div>
+        <div class="detail-actions">
+          <input type="number" id="detailQuantity" min="1" value="1">
+          <button id="detailAddToCart" class="btn-primary">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Scripts -->
+<script src="search.js"></script>
+<script src="search-results.js"></script>
+</body>
+</html>

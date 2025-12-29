@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKYYNETT</title>
+  <link rel="stylesheet" href="reset.css">
+  <link rel="stylesheet" href="all.min.css">
+  <link rel="stylesheet" href="fontawesome.min.css">
+  <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont/dist/tabler-icons.min.css">
+    <link rel="icon" type="image/png" href="skyynettlogo.png">
+</head>
+<body>
+
+<!-- ===================== NAVBAR ===================== -->
+<header class="navbar">
+  <!-- Hamburger Menu (Mobile) -->
+  <div class="hamburger" id="hamburger">
+    <div class="bar top"></div>
+    <div class="bar middle"></div>
+    <div class="bar bottom"></div>
+  </div>
+
+  <!-- Logo Section -->
+  <div class="logo">
+    <img src="skyynettlogo.png" alt="Logo">
+    <span class="brand-text">Skyynett</span>
+  </div>
+
+  <!-- Navigation Links -->
+  <ul class="nav-links desktop-only">
+    <li><a href="#">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+
+  <!-- Navbar Buttons -->
+  <div class="nav-buttons">
+    <!-- Search Icon -->
+    <div class="search-container desktop-only">
+  <button id="searchToggle" class="search-icon" aria-label="Open search"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg></button>
+      <div id="searchDropdown" class="search-dropdown">
+        <input type="text" id="searchInput" placeholder="Search products..." />
+        <button id="searchBtn" aria-label="Search"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 21l-6 -6" /><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /></svg></button>
+      </div>
+    </div>
+
+  <!-- Cart -->
+  <button id="cartBtn" class="cart-btn">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-shopping-cart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+    <span id="cartCount" class="cart-badge" style="display: none;">0</span>
+  </button>
+
+    <!-- Wishlist -->
+    <button class="wishlist_nav_btn" aria-label="Wishlist"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-heart"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg></button>
+
+    <!-- Login/Profile -->
+    <!--div class="profile-container desktop-only">
+      <button id="profileIcon" class="login-icon"><i class="fas fa-user"></i></button>
+      <div class="profile-dropdown" id="profileDropdown">
+        <ul>
+          <li id="loginOption"><i class="fas fa-sign-in-alt"></i> Login</li>
+          <li id="signupOption"><i class="fas fa-user-plus"></i> Signup</li>
+          <li id="logoutOption"><i class="fas fa-sign-out-alt"></i> Logout</li>
+        </ul>
+      </div>
+    </div-->
+
+    <!-- ✅ Theme Toggle Button -->
+   <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+      <!-- Sun (visible in light theme) -->
+      <svg class="theme-icon sun" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><circle cx="12" cy="12" r="4"/><path d="M3 12h1m16 0h1M12 3v1m0 16v1M5 5l.7 .7m12.6 12.6l.7 .7M18.36 5.64l-.7 .7M6.34 18.36l-.7 .7"/></svg>
+      <!-- Moon (visible in dark theme) -->
+      <svg class="theme-icon moon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M21 12.79A9 9 0 1 1 11.21 3a7 7 0 0 0 9.79 9.79z"/></svg>
+    </button>
+
+    </div>
+
+</header>
+
+<!-- Sidebar for Mobile -->
+<aside class="sidebar" id="sidebar">
+  <ul class="sidebar-links">
+    <li ><a href="#">Home</a></li>
+    <li><a href="shop.html">Shop</a></li>
+    <li><a href="categories.html">Categories</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+  <div class="sidebar-bottom">
+    <button id="wishlist_mobilenav_btn">Wishlist</button>
+  </div>
+</aside>
+
+
+<!-- ===================== CART SIDEBAR ===================== -->
+<div class="cart-sidebar" id="cartSidebar">
+    <button class="close-cart" id="closeCart">&times;</button>
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <div class="cart-footer">
+        <p>Total: $<span id="cartTotal">0.00</span></p>
+        <a href="checkout.html" id="checkoutBtn" class="checkout-link">Checkout</a>
+    </div>
+</div>
+
+
+<!-- ===================== LOGIN MODAL ===================== -->
+<div id="loginModal" class="login-modal">
+  <div class="login-box">
+      <span id="closeLogin" class="close-btn">&times;</span>
+      <h2>Login</h2>
+      <input type="text" id="username" placeholder="Username">
+      <input type="password" id="password" placeholder="Password">
+      <button id="submitLogin">Login</button>
+      <p class="forgot-pass"><a href="#" id="forgotPassLink">Forgot Password?</a></p>
+      <div id="forgotPassForm" style="display:none;">
+          <input type="email" id="resetEmail" placeholder="Enter your email">
+          <button id="sendReset">Send Reset Link</button>
+      </div>
+  </div>
+</div>
+
+
+<!-- ===================== SIGN UP MODAL ===================== -->
+<div id="signupModal" class="login-modal">
+  <div class="login-box">
+      <span id="closeSignup" class="close-btn">&times;</span>
+      <h2>Create Account</h2>
+      <input type="text" id="signupUsername" placeholder="Username" required>
+      <input type="email" id="signupEmail" placeholder="Email" required>
+      <input type="password" id="signupPassword" placeholder="Password" required>
+      <input type="password" id="signupConfirmPassword" placeholder="Confirm Password" required>
+      <button id="submitSignup">Sign Up</button>
+      <p class="switch-to-login">Already have an account? <a href="#" id="switchToLogin">Login</a></p>
+  </div>
+</div>
+
+
+<!-- ===================== OVERLAY ===================== -->
+<div class="overlay" id="overlay"></div>
+
+
+<!-- ===================== HERO SECTION ===================== -->
+<section class="hero-shopping">
+    <div class="hero-shopping-container">
+      <div class="hero-text">
+        <div class="hero-badge">Welcome to Skyynett</div>
+          <!-- Inline mobile image: shown only on small screens and hidden on desktop -->
+          <div class="hero-inline-image">
+            <img class="feature-photo inline" src="gpt.png" alt="Featured gadget">
+          </div>
+        <h1>Discover Exclusive Devices & Gadgets</h1>
+        <p>Premium selection of affordable, refurbished, and brand-new devices. Curated quality at unbeatable prices.</p>
+        <div class="hero-buttons">
+          <a href="shop.html" class="btn-primary" role="button" aria-label="Shop Now">Shop Now</a>
+        </div>
+      </div>
+      <div class="hero-showcase">
+        <div class="hero-image">
+          <img class="feature-photo" src="gpt.png" alt="Featured gadget">
+        </div>
+      </div>
+    </div>
+</section>
+
+
+<!-- ===================== CATEGORY SECTION ===================== -->
+<main>
+  <section id="categories">
+    <h2>Explore Skyynett"s Top Products By Category</h2>
+    <div class="category-row-wrap">
+      <div class="category-container">
+
+<div class="category-card">
+     <img src="images/iphone2.png" alt="">
+    <h3> iPhones</h3>
+</div>
+
+<div class="category-card">
+    <img class="SW" src="images/samsung.png" alt="">
+    <h3>Samsungs</h3>
+</div>
+
+<div class="category-card">
+    <img class="SW" src="images/ipad.png" alt="">
+  <h3> iPads</h3>
+</div>
+
+<div class="category-card">
+    <img class="LP" src="images/laptops.png" alt="">
+  <h3>Laptops</h3>
+</div>
+
+<div class="category-card">
+    <img src="images/console-2-preview.png" alt="">
+  <h3>Consoles</h3>
+</div>
+
+
+<div class="category-card">
+    <img  class="SW" src="images/smartwatch.png" alt="">
+   <h3> Smartwatches</h3>
+</div>
+
+      </div> <!-- .category-container -->
+    </div> <!-- .category-row-wrap -->
+  </section>
+
+  <!-- ===================== BEST SELLERS ===================== -->
+  <section id="best-sellers" class="best-sellers">
+    <h2><i class="fa-solid fa-star"></i> Best Sellers</h2>
+    <div class="product-grid">
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/iphone11.JPG" alt="iPhone 11 White"></div>
+          <div class="product-info">
+            <h3 class="product-name">iPhone 11</h3>
+            <p class="product-description">Refurbished, 64GB — Excellent condition.</p>
+          </div>
+          <div class="prod-price">$249.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/iphone13.JPG" alt="iPhone 13 Green"></div>
+          <div class="product-info">
+            <h3 class="product-name">iPhone 13</h3>
+            <p class="product-description">Brand new, 128GB (green).</p>
+          </div>
+          <div class="prod-price">$599.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/iphones/iphone 15.jpg" alt="iPhone 15"></div>
+          <div class="product-info">
+            <h3 class="product-name">iPhone 15</h3>
+            <p class="product-description">Latest model, limited stock.</p>
+          </div>
+          <div class="prod-price">$899.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/samsungs/S25.jpg" alt="Samsung Galaxy"></div>
+          <div class="product-info">
+            <h3 class="product-name">Samsung Galaxy</h3>
+            <p class="product-description">High-performance Android phone.</p>
+          </div>
+          <div class="prod-price">$399.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/ipads/ipad pro 11.jpg" alt="iPad"></div>
+          <div class="product-info">
+            <h3 class="product-name">iPad</h3>
+            <p class="product-description">10.2-inch, ideal for work and study.</p>
+          </div>
+          <div class="prod-price">$329.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/laptops/MB pro.jpg" alt="MacBook Pro 2021"></div>
+          <div class="product-info">
+            <h3 class="product-name">MacBook Pro</h3>
+            <p class="product-description">Intel or Apple Silicon options.</p>
+          </div>
+          <div class="prod-price">$1,199.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/consoles/ps5.jpg" alt="PlayStation 5"></div>
+          <div class="product-info">
+            <h3 class="product-name">PlayStation 5</h3>
+            <p class="product-description">Console bundle with controller.</p>
+          </div>
+          <div class="prod-price">$499.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/smart watches/Apple Watch.jpg" alt="Apple Watch"></div>
+          <div class="product-info">
+            <h3 class="product-name">Apple Watch</h3>
+            <p class="product-description">Series 9, fitness & health features.</p>
+          </div>
+          <div class="prod-price">$279.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+      <div class="product-item">
+        <article class="product-card">
+          <div class="product-image"><img src="images/laptops/Dell xps 13.jpg" alt="Dell XPS 13"></div>
+          <div class="product-info">
+            <h3 class="product-name">Dell XPS 13</h3>
+            <p class="product-description">Compact laptop for professionals.</p>
+          </div>
+          <div class="prod-price">$999.00</div>
+          <div class="product-actions">
+            <button class="checkout-btn" aria-label="Checkout">Checkout</button>
+            <button class="cart-icon-btn" aria-label="Add to cart" title="Add to cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+            </button>
+          </div>
+        </article>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Toggle Button for Best Sellers -->
+  <div class="product-grid-toggle">
+    <button id="toggleBestSellers" class="collapsed" aria-label="Show more products" title="Show more">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </button>
+  </div>
+</main>
+
+<!-- ===================== TESTIMONIALS SECTION ===================== -->
+<section class="testimonials-section">
+  <div class="testimonials-container">
+    <h2>What Our Customers Say</h2>
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Amazing product quality and super fast delivery. The customer service team was incredibly helpful when I had questions. Highly recommend Skyynett!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">AK</div>
+          <div class="author-info">
+            <p class="author-name">Amara Khan</p>
+            <p class="author-title">Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Best place to buy tech gadgets online. Great prices, authentic products, and the delivery was much faster than expected. Will definitely order again!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JM</div>
+          <div class="author-info">
+            <p class="author-name">James Mitchell</p>
+            <p class="author-title">Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"I was skeptical at first, but Skyynett exceeded all my expectations. The product arrived in perfect condition and the pricing is unbeatable. Thank you!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SL</div>
+          <div class="author-info">
+            <p class="author-name">Sarah Lewis</p>
+            <p class="author-title">Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="testimonial-stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Excellent experience from start to finish. Product quality is outstanding and the whole buying process was smooth. Already recommended to my friends!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">RC</div>
+          <div class="author-info">
+            <p class="author-name">Ryan Chen</p>
+            <p class="author-title">Verified Buyer</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FEATURES SECTION ===================== -->
+<section class="features-section">
+  <div class="features-container">
+    <h2>Why Choose Skyynett</h2>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2 -1.61L23 6H6"/></svg>
+        </div>
+        <h3>Fast Delivery</h3>
+        <p>Get your gadgets delivered quickly to your doorstep with our reliable shipping partners.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1a3 3 0 0 0 -3 3v12a3 3 0 0 0 3 3a3 3 0 0 0 3 -3V4a3 3 0 0 0 -3 -3"/><path d="M6 5H4a2 2 0 0 0 -2 2v12a2 2 0 0 0 2 2h2"/><path d="M18 5h2a2 2 0 0 1 2 2v12a2 2 0 0 1 -2 2h-2"/></svg>
+        </div>
+        <h3>Premium Quality</h3>
+        <p>Every product is carefully selected and tested to ensure the highest quality standards.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1C6.477 1 2 5.477 2 11c0 5.523 4.477 10 10 10s10 -4.477 10 -10c0 -5.523 -4.477 -10 -10 -10z"/><path d="M12 5v6l4 2"/></svg>
+        </div>
+        <h3>24/7 Support</h3>
+        <p>Our dedicated customer support team is always ready to help with any questions or concerns.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 1l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91 -1.01L12 1z"/></svg>
+        </div>
+        <h3>Best Prices</h3>
+        <p>Competitive pricing on all your favorite tech gadgets with regular discounts and deals.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PRODUCT DETAIL MODAL ===================== -->
+<div class="product-detail-modal" id="productDetailModal">
+  <div class="product-detail-content">
+    <button class="close-detail" id="closeProductDetail" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+    </button>
+    <div class="detail-image-section">
+      <img id="detailProductImage" src="" alt="Product" class="detail-image">
+    </div>
+    <div class="detail-info-section">
+      <h2 id="detailProductTitle"></h2>
+      <p id="detailProductPrice" class="detail-price"></p>
+      <p id="detailProductDesc" class="detail-description"></p>
+      <button id="detailAddToCart" class="add-to-cart-detail">Checkout</button>
+    </div>
+  </div>
+</div>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="footer-content-wrapper">
+    <!-- Footer Main Content -->
+    <div class="footer-main">
+      <!-- Brand Section -->
+      <div class="footer-brand">
+        <div class="footer-logo-section">
+          <img src="skyynettlogo.png" alt="Skyynett Logo" class="footer-logo-img">
+          <div>
+            <h3>Skyynett</h3>
+            <p>Quality, affordable gadgets you can trust</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <div class="footer-links-grid">
+          <a href="#">Home</a>
+          <a href="shop.html">Shop</a>
+          <a href="categories.html">Categories</a>
+          <a href="#">About Us</a>
+          <a href="#">Contact</a>
+          <a href="#">Blog</a>
+          <a href="admin-dashboard/public/admin.html">Admin</a>
+        </div>
+      </div>
+
+      <!-- Support Section -->
+      <div class="footer-column">
+        <h4>Support</h4>
+        <div class="footer-links-grid">
+          <a href="#">FAQ</a>
+          <a href="#">Shipping Info</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">T&Cs</a>
+          <a href="#">Contact Us</a>
+          <a href="#">Help Center</a>
+        </div>
+      </div>
+
+      <!-- Connect Section -->
+      <div class="footer-column">
+        <h4>Connect With Us</h4>
+        <div class="footer-social-icons">
+          <a href="#" id="whatsapp-icon" class="social-icon" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="#" id="fb-icon" class="social-icon" title="Facebook"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" id="insta-icon" class="social-icon" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" class="social-icon" id="twitter-icon" title="Twitter"><i class="fa-brands fa-twitter"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-bottom-left">
+        <p>&copy; 2025 Skyynett. All rights reserved.</p>
+      </div>
+      <div class="footer-bottom-right">
+        <button id="backToTop" class="back-to-top-btn" onclick="window.location.href='index.html'"><i class="fa-solid fa-arrow-up"></i> Back to Top</button>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ===================== BOTTOM NAV (MOBILE) ===================== -->
+<nav class="bottom-nav" id="bottomNav">
+  <a href="shop.html" class="bottom-nav-item" title="Shop">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6.331 8h11.339a2 2 0 0 1 1.977 2.304l-1.255 8.152a3 3 0 0 1 -2.966 2.544h-6.852a3 3 0 0 1 -2.965 -2.544l-1.255 -8.152a2 2 0 0 1 1.977 -2.304z" /><path d="M9 11v-5a3 3 0 0 1 6 0v5" /></svg>
+    <span>Shop</span>
+  </a>
+  <a href="categories.html" class="bottom-nav-item" title="Categories">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h6v6h-6z" /><path d="M14 4h6v6h-6z" /><path d="M4 14h6v6h-6z" /><path d="M17 17m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /></svg>
+    <span>Categories</span>
+  </a>
+  <a href="#" class="bottom-nav-item" id="bottomNavWishlist" title="Wishlist">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19.5 12.572l-7.5 7.428l-7.5 -7.428a5 5 0 1 1 7.5 -6.566a5 5 0 1 1 7.5 6.572" /></svg>
+    <span>Wishlist</span>
+  </a>
+  <a href="#" class="bottom-nav-item" id="bottomNavCart" title="Cart">
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M6 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 19m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" /><path d="M17 17h-11v-14h-2" /><path d="M6 5l14 1l-1 7h-13" /></svg>
+    <span>Cart</span>
+  </a>
+</nav>
+
+<script src="search.js"></script>
+<script src="cart.js"></script>
+<script src="product-detail.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
