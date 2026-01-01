@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://gds-det9.onrender.com/api';
 let selectedCategoryId = null;
 
 // ============= LOGIN SETUP =============
